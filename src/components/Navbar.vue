@@ -1,19 +1,19 @@
 <template>
   <nav class="navbar">
     <div class="brand-name">L.</div>
-    <a href="" class="toggle-button">
+    <a href="#" @click="showPanel=!showPanel" class="toggle-button">
         <span class="bar"></span>
         <span class="bar"></span>
         <span class="bar"></span>        
     </a>
-    <div class="navbar-links">
+    <div v-if="showPanel" class="navbar-links">
         <ul>
             <li><router-link to="/">Home</router-link></li>
             <li><router-link to="/about">About</router-link></li>
-            <li><router-link to="/popular">Popular</router-link></li>
-            <li><router-link to="/trending">Trending</router-link></li>
-            <li><router-link to="/categories">Categories</router-link></li>
-            <li><router-link to="/contacts">Contacts</router-link></li>
+            <li><router-link to="/about">Popular</router-link></li>
+            <li><router-link to="/about">Trending</router-link></li>
+            <li><router-link to="/about">Categories</router-link></li>
+            <li><router-link to="/about">Contacts</router-link></li>
         </ul>
     </div>
     
@@ -23,8 +23,14 @@
 </template>
 
 <script>
+import { ref } from 'vue'
 export default {
+    setup(){
+        const showPanel = ref(true)
 
+        return {showPanel}
+        
+    }
 }
 </script>
 
@@ -88,7 +94,7 @@ body{
         display: flex;
     }
     .navbar-links{
-        /* display: none; */
+        display: flex;
         width: 100%;
         text-align: center;
     }
@@ -105,16 +111,9 @@ body{
     }
 }
 
-/* a {
-  font-weight: bold;
-  color: #888;
-  text-decoration:none;
-  padding: 0 5px;
-} */
-
-a.router-link-exact-active {
+/* a.router-link-exact-active {
   color: #00a2ff;
   text-decoration: underline
-}
+} */
 
 </style>
