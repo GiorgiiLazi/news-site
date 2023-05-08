@@ -8,12 +8,9 @@
     </a>
     <div v-if="showPanel" class="navbar-links">
         <ul>
-            <li><router-link to="/">Home</router-link></li>
-            <li><router-link to="/about">About</router-link></li>
-            <li><router-link to="/about">Popular</router-link></li>
-            <li><router-link to="/about">Trending</router-link></li>
-            <li><router-link to="/about">Categories</router-link></li>
-            <li><router-link to="/about">Contacts</router-link></li>
+            <li><router-link :to="{name: 'home'}">Home</router-link></li>
+            <li><router-link :to="{name: 'about'}">About</router-link></li>
+            <li><router-link :to="{name: 'home'}">Contacts</router-link></li>
         </ul>
     </div>
     
@@ -29,7 +26,6 @@ export default {
         const showPanel = ref(true)
 
         return {showPanel}
-        
     }
 }
 </script>
