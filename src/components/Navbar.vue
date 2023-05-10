@@ -85,7 +85,7 @@ body{
     border-radius: 4px;
 }
 
-@media (max-width: 400px){
+@media only screen and (max-width: 400px){
     .toggle-button{
         display: flex;
     }

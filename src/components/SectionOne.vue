@@ -3,10 +3,10 @@
     <div class="wrapper-one">
         <div class="article-one">
             <img src="@/assets/legocity.jpg" alt="">
-            <a class="bold-statement" href="#">What makes Lego so unique?</a>
+            <router-link :to="{name: 'home'}"  class="bold-statement" href="#">What makes Lego so unique?</router-link>
             <div class="description">
-                <a href="#">We delve into curiuos history of Lego world which put it's brand on the Olympus of modern toy making</a>
-                <button>Read more</button>
+                <router-link :to="{name: 'home'}" >We delve into curiuos history of Lego world which put it's brand on the Olympus of modern toy making</router-link>
+                <router-link :to="{name: 'home'}" class="button">Read more</router-link>
             </div>
         </div>
     </div>
@@ -55,21 +55,20 @@ body{
 }
 .box{
     display:grid;
-    grid-template-columns: repeat(12fr, minmax(50px, 120px));
-    grid-template-rows: repeat(12fr, minmax(50px, 120px));
+    grid-template-columns: repeat(auto, 12fr);
+    grid-template-rows: repeat(auto, 12fr);
+    gap: 2.5px;
 }
 .wrapper-one{
-    grid-column: 1/2;
+    grid-column: 1/10;
     grid-row: 1/10;
-    max-width: 800px;
-    margin: 5px;
+    margin: 5px auto;
 
 }
 .wrapper-two{
-    grid-column: 10/13;
+    grid-column: 11/13;
     grid-row: 1/10;
-    max-width: 350px;
-    margin: 5px 0;
+    margin: 5px auto;
 }
 .article-one{
     display:inline-block;
@@ -87,7 +86,6 @@ body{
     grid-row: 1/4;
 }
 .bold-statement{
-    width: 400px;
     font-size: 45px;
     letter-spacing: 0.2px;
     font-weight: bold;
@@ -98,7 +96,6 @@ body{
     grid-row: 4/5;
 }
 .description{
-    width: 400px;
     font-size: 15px;
     grid-column: 2;
     grid-row: 4/5;
@@ -114,19 +111,22 @@ body{
     text-decoration: none;
 
 }
-.description button{
-    position: relative;
-    top: 40px;
-    right: 150px;
+.description .button{
     border: none;
+    font-weight: bold;
     background-color: orangered;
     color: white;
     padding: 10px;
     border-radius: 4px;
+    cursor: pointer;
+}
+.description a{
+    display: inline-block;
+    margin: 0 2px;
 }
 .right-panel{
     text-align:center;
-    max-height: 700px;
+    /* max-height: 700px; */
     background-color:rgb(14, 1, 27)
 }
 .right-panel h1{
@@ -138,10 +138,6 @@ body{
 .right-panel h5{
     color:chocolate;
     margin: 0 0 10px 0px;
-}
-.right-panel div{
-    width: 100%;
-    
 }
 .title-one{
     display: block;
@@ -164,6 +160,31 @@ hr{
 .right-panel img{
     max-width: 130px;
     margin: 30px 0;
+}
+
+@media only screen and (max-width: 400px){
+    .wrapper-one{
+        grid-column: 1/-1;
+        grid-row: 1/10;
+    }
+    .wrapper-two{
+        grid-column: 1/-1;
+        grid-row: 10/13;
+    }
+    .article-one img{
+        grid-row: 1/8;
+        grid-column: 1/-1;
+    }
+    .bold-statement{
+        grid-row: 9/10;
+        grid-column: 1/-1;
+    }
+    .description{
+        grid-column: 1/-1;
+        grid-row:11/13;
+    }
+
+
 }
 
 
