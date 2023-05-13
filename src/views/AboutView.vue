@@ -6,7 +6,7 @@
         
         <h1>Who we are</h1>
         <hr>
-        <p><span class="name">L. news</span> website is a portfolio projects, a single page application. The purpose of this website is to show its developer's skills in grid, vue, js and html.</p>
+        <p><router-link :to="{name: 'home'}">L. news</router-link> website is a portfolio projects, a single page application. The purpose of this website is to show its developer's skills in CSS grid, CSS flex, Vue framework, and HTML.</p>
         <br>
         <br>
         <p>All articles on this website are open-source, links are provided, no copyright infringment is intended.</p>
@@ -49,9 +49,10 @@ export default {
   margin: 5px;
   font-size: 24px;
 }
-.box-one p span{
+.box-one p a{
   font-size:34px;
   text-decoration:underline;
+  color: white;
 }
 .box-two{
   grid-column: 2/5;
@@ -65,6 +66,19 @@ hr{
   border-radius: 4px;
   margin: 20px 20px ;
 }
+@media only screen and (max-width:600px){
+  .box-one{
+    grid-column: 1/-1;
+    grid-row: 4/13;
+  }
+  .box-two{
+    grid-column: 1/-1;
+    grid-row:1/3;
+  }
+
+}
+  
+
 
 </style>
 

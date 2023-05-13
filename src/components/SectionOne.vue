@@ -3,10 +3,10 @@
     <div class="wrapper-one">
         <div class="article-one">
             <img src="@/assets/legocity.jpg" alt="">
-            <router-link :to="{name: 'home'}"  class="bold-statement" href="#">What makes Lego so unique?</router-link>
+            <router-link :to="{name: 'lego'}"  class="bold-statement" href="#">What makes Lego so unique?</router-link>
             <div class="description">
-                <router-link :to="{name: 'home'}" >We delve into curiuos history of Lego world which put it's brand on the Olympus of modern toy making</router-link>
-                <router-link :to="{name: 'home'}" class="button">Read more</router-link>
+                <router-link :to="{name: 'lego'}" >We delve into curiuos history of Lego world which puts it's brand on the Olympus of modern toy making</router-link>
+                <router-link :to="{name: 'lego'}" class="button">Read more</router-link>
             </div>
         </div>
     </div>
@@ -48,7 +48,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 body{
     margin: 0;
     padding: 0;
@@ -57,18 +57,17 @@ body{
     display:grid;
     grid-template-columns: repeat(auto, 12fr);
     grid-template-rows: repeat(auto, 12fr);
-    gap: 2.5px;
 }
 .wrapper-one{
     grid-column: 1/10;
     grid-row: 1/10;
-    margin: 5px auto;
+    margin: 5px 5px 2.5px 5px;
 
 }
 .wrapper-two{
     grid-column: 11/13;
     grid-row: 1/10;
-    margin: 5px auto;
+    margin: 5px 5px 5px 2.5px;
 }
 .article-one{
     display:inline-block;
@@ -86,17 +85,19 @@ body{
     grid-row: 1/4;
 }
 .bold-statement{
+    margin: 0 5px;
     font-size: 45px;
     letter-spacing: 0.2px;
     font-weight: bold;
     text-decoration: none;
     text-align: left;
-    color: black;
+    color: rgb(56, 1, 95);
     grid-column: 1;
     grid-row: 4/5;
 }
 .description{
     font-size: 15px;
+    font-family:Georgia serif;
     grid-column: 2;
     grid-row: 4/5;
 
@@ -112,9 +113,10 @@ body{
 
 }
 .description .button{
+    margin: 10px 0;
     border: none;
     font-weight: bold;
-    background-color: orangered;
+    background-color: darkviolet;
     color: white;
     padding: 10px;
     border-radius: 4px;
@@ -126,14 +128,14 @@ body{
 }
 .right-panel{
     text-align:center;
-    /* max-height: 700px; */
+    font-family: Calibri;
     background-color:rgb(14, 1, 27)
 }
 .right-panel h1{
     display: flex;
     align-self: flex-start;
     color:chocolate;
-    margin: 0 0 20px 5px;
+    margin: 0 0 20px 15px;
 }
 .right-panel h5{
     color:chocolate;
@@ -162,14 +164,16 @@ hr{
     margin: 30px 0;
 }
 
-@media only screen and (max-width: 400px){
+@media only screen and (max-width: 600px){
     .wrapper-one{
         grid-column: 1/-1;
         grid-row: 1/10;
+        margin: 5px;
     }
     .wrapper-two{
         grid-column: 1/-1;
         grid-row: 10/13;
+        margin: 5px;
     }
     .article-one img{
         grid-row: 1/8;
@@ -183,9 +187,8 @@ hr{
         grid-column: 1/-1;
         grid-row:11/13;
     }
-
-
+    .description .button{
+        margin:10px 100px;
+    }
 }
-
-
 </style>

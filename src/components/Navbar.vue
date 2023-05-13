@@ -10,7 +10,7 @@
         <ul>
             <li><router-link :to="{name: 'home'}">Home</router-link></li>
             <li><router-link :to="{name: 'about'}">About</router-link></li>
-            <li><router-link :to="{name: 'home'}">Contacts</router-link></li>
+            <li><router-link :to="{name: 'contacts'}">Contacts</router-link></li>
         </ul>
     </div>
     
@@ -108,7 +108,7 @@ body{
 }
 
 /* a.router-link-exact-active {
-  color: #00a2ff;
+  color: black;
   text-decoration: underline
 } */
 
