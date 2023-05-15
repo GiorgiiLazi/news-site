@@ -28,7 +28,7 @@
     <hr>
     <div class="link">
         <a href="https://www.britannica.com/topic/LEGO">Link to the original article: <img src="@/assets/link.png" alt=""></a>
-        </div>
+    </div>
 </template>
 
 <script>
@@ -65,7 +65,7 @@ hr{
     background-color: chocolate;
     max-width: 800px;
     height: auto;
-    font-size: 34px;
+    font-size: 25px;
     border-radius: 40px;
 }
 .link{

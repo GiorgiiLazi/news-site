@@ -16,8 +16,8 @@
         <div class="right-panel">
             <h1>New</h1>
             <div>
-                <router-link :to="{name: 'home'}" class="title-one">Manual vs automatic car transmissions</router-link>
-                <router-link :to="{name: 'home'}" class="title-two">Take a few moments and familiarise yourself with the benefits associated with the two different kinds of transmission</router-link>
+                <router-link :to="{name: 'cars'}" class="title-one">Manual vs automatic car transmissions</router-link>
+                <router-link :to="{name: 'cars'}" class="title-two">Take a few moments and familiarise yourself with the benefits associated with the two different kinds of transmission</router-link>
             </div>
             <hr>
             <div>
@@ -83,6 +83,7 @@ body{
     width: 100%;
     grid-column: 1/3;
     grid-row: 1/4;
+    border-radius: 8px;
 }
 .bold-statement{
     margin: 0 5px;
@@ -129,7 +130,8 @@ body{
 .right-panel{
     text-align:center;
     font-family: Calibri;
-    background-color:rgb(14, 1, 27)
+    background-color:rgb(14, 1, 27);
+    border-radius: 8px;
 }
 .right-panel h1{
     display: flex;
@@ -140,6 +142,12 @@ body{
 .right-panel h5{
     color:chocolate;
     margin: 0 0 10px 0px;
+}
+.right-panel div .title-one{
+    text-align: center;
+}
+.right-panel div .title-two{
+    text-align: left;
 }
 .title-one{
     display: block;
@@ -162,6 +170,7 @@ hr{
 .right-panel img{
     max-width: 130px;
     margin: 30px 0;
+    border-radius: 8px;
 }
 
 @media only screen and (max-width: 600px){

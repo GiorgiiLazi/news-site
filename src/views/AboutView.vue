@@ -9,7 +9,7 @@
         <p><router-link :to="{name: 'home'}">L. news</router-link> website is a portfolio projects, a single page application. The purpose of this website is to show its developer's skills in CSS grid, CSS flex, Vue framework, and HTML.</p>
         <br>
         <br>
-        <p>All articles on this website are open-source, links are provided, no copyright infringment is intended.</p>
+        <p>All articles on this website are open-source and links are provided. No copyright infringment is intended.</p>
 
       </div>
       <div class="box-two">
@@ -39,6 +39,7 @@ export default {
   grid-column: 1;
   grid-row: 1/-1;
   color: white;
+  margin: 20px 0;
 }
 .box-one h1{
   text-align: center;
@@ -51,7 +52,9 @@ export default {
 }
 .box-one p a{
   font-size:34px;
+  font-family: Georgia;
   text-decoration:underline;
+  text-decoration-thickness: 1.5px;
   color: white;
 }
 .box-two{
@@ -66,7 +69,7 @@ hr{
   border-radius: 4px;
   margin: 20px 20px ;
 }
-@media only screen and (max-width:600px){
+@media only screen and (max-width:800px){
   .box-one{
     grid-column: 1/-1;
     grid-row: 4/13;
