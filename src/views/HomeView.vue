@@ -12,7 +12,10 @@ import Navbar from '../components/Navbar.vue'
 
 export default {
   name: 'HomeView',
-  components: { Navbar, SectionOne }
+  components: { Navbar, SectionOne },
+  mounted(){
+    document.title = "L. news"
+  }
 }
 </script>
 

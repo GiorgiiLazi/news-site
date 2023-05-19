@@ -26,11 +26,11 @@
             </div>
             <hr>
             <div>
-            <router-link :to="{name: 'home'}" class="title-one">Unexplained Mysteries of the Amazon</router-link>
-            <router-link :to="{name: 'home'}" class="title-two">The world's biggest tropical rainforest hides lots of scary secrets—and some beautiful ones too</router-link>
+            <router-link :to="{name: 'amazon'}" class="title-one">Fauna of Amazon: The most bizarre animals</router-link>
+            <router-link :to="{name: 'amazon'}" class="title-two">The world's biggest tropical rainforest hides lots of scary secrets — and some beautiful ones too</router-link>
             </div>
             <hr>
-            <h5>Check out author's other projects:</h5>
+            <h5>Check out other author's projects:</h5>
             <img src="@/assets/qr.png" alt="">
         </div>
     </div>
@@ -57,6 +57,11 @@ body{
     display:grid;
     grid-template-columns: repeat(auto, 12fr);
     grid-template-rows: repeat(auto, 12fr);
+    animation: fadeIn 1s;
+}
+@keyframes fadeIn{
+    0%{opacity: 0}
+    100%{opacity: 1}
 }
 .wrapper-one{
     grid-column: 1/10;
@@ -88,13 +93,15 @@ body{
 .bold-statement{
     margin: 0 5px;
     font-size: 45px;
-    letter-spacing: 0.2px;
+    font-family: fantasy;
+    letter-spacing: 0.1em;
     font-weight: bold;
     text-decoration: none;
     text-align: left;
-    color: rgb(56, 1, 95);
+    color: purple;
     grid-column: 1;
     grid-row: 4/5;
+    text-transform: uppercase;
 }
 .description{
     font-size: 15px;
@@ -104,12 +111,12 @@ body{
 
 }
 .description a {
-    font-size: 12px;
+    color: purple;
+    font-size: 16px;
     position: relative;
     top: 10px;
     text-align: left;
     letter-spacing: 0.1em;
-    color: black;
     text-decoration: none;
 
 }
@@ -117,7 +124,7 @@ body{
     margin: 10px 0;
     border: none;
     font-weight: bold;
-    background-color: darkviolet;
+    background-color: purple;
     color: white;
     padding: 10px;
     border-radius: 4px;
@@ -145,6 +152,7 @@ body{
 }
 .right-panel div .title-one{
     text-align: center;
+    text-transform: uppercase;
 }
 .right-panel div .title-two{
     text-align: left;

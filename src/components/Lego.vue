@@ -1,6 +1,7 @@
 <template>
   <Navbar/>
-  <div class="picture">
+  <div class="box">
+    <div class="picture">
     <img src="@/assets/legocity.jpg" alt="">
   </div>
   <h1>What makes Lego so unique?</h1>
@@ -21,6 +22,10 @@
     <br> <br>
     MINDSTORMS products, which centre on a programmable robotics pack containing customized bricks, were first launched in 1998, and they went through multiple iterations of increasing complexity over the succeeding years.</div>
 
+    <div class="picture">
+        <img src="@/assets/legocity1.jpg" alt="">
+    </div>
+
   <div class="article">
     The basic LEGO brick has remained the same since it was patented, and this simple, child-friendly design has been credited with the toy’s longevity. As a result, these bricks have saturated the culture of childhood throughout much of the world. LEGO, which has remained in the Christiansen family for generations, was among the inaugural inductees to the U.S. 
     <br> <br>
@@ -29,33 +34,46 @@
     <div class="link">
         <a href="https://www.britannica.com/topic/LEGO">Link to the original article: <img src="@/assets/link.png" alt=""></a>
     </div>
+  </div>
+  
 </template>
 
 <script>
 import Navbar from '../components/Navbar.vue'
 export default {
     name: 'lego',
-    components: {Navbar}
+    components: {Navbar},
+    mounted(){
+    document.title = "What makes lego so unique?"
+  }
 
 }
 </script>
 
 <style scoped>
+.box{
+    animation: fadeIn 1s;
+}
+@keyframes fadeIn{
+    0%{opacity:0}
+    100%{opacity: 1}
+}
 .picture{
     margin: 5px auto;
     width: 90%;
 }
-div img{
+.box div img{
     width: 100%;
     border-radius: 12px;
 }
-h1{
+.box h1{
+    text-align: center;
     margin: 20px auto;
     width: 50%;
     color:rgb(79, 0, 108);
     font-size: 64px;
 }
-hr{
+.box hr{
     border-top: 3px solid darkviolet;
     margin: 0 50px;
 }
@@ -72,20 +90,21 @@ hr{
     margin: 20px auto;
     width: 50%;
     padding: 20px;
-    font-size: 35px;
+    font-size: 30px;
+    text-align: center;
 }
 .link a{
     text-decoration: none;
     color: black;
 }
 .link a img{
-    width: 50px;
+    width: 40px;
 }
 .link a img:hover{
     width: 1.5em;
 }
 @media only screen and (max-width: 600px){
-    h1{
+    .box h1{
         font-size: 35px;
     }
     .article{

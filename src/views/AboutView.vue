@@ -6,10 +6,10 @@
         
         <h1>Who we are</h1>
         <hr>
-        <p><router-link :to="{name: 'home'}">L. news</router-link> website is a portfolio projects, a single page application. The purpose of this website is to show its developer's skills in CSS grid, CSS flex, Vue framework, and HTML.</p>
+        <p><router-link :to="{name: 'home'}">L. news</router-link> website is a Frontend portfolio project, a single page application. The purpose of this website is to show developer's skills in CSS grid, CSS flex, Vue framework, and HTML.</p>
         <br>
         <br>
-        <p>All articles on this website are open-source and links are provided. No copyright infringment is intended.</p>
+        <p>All articles on this website are open-source and links are provided</p>
 
       </div>
       <div class="box-two">
@@ -24,7 +24,10 @@
 import Navbar from '../components/Navbar.vue'
 export default {
   name: 'AboutView',
-  components: { Navbar }
+  components: { Navbar },
+  mounted(){
+    document.title = "About"
+  }
 }
 </script>
 
@@ -34,6 +37,11 @@ export default {
   display: grid;
   grid-template-columns: repeat(auto, 4fr);
   grid-template-rows: repeat(auto, 12fr);
+  animation: fadeIn 1s;
+}
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 .box-one{
   grid-column: 1;
@@ -62,7 +70,7 @@ export default {
   grid-row:1/-1;
 }
 .box-two img{
-  max-width: 100%;
+  width: 100%;
 }
 hr{
   border-bottom: 3px solid white;

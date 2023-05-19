@@ -14,13 +14,16 @@
 import Navbar from '../components/Navbar.vue'
 export default {
     name: 'contacts',
-    components: { Navbar }
+    components: { Navbar },
+    mounted(){
+    document.title = "Contacts"
+  }
   }
 </script>
 
 <style scoped>
 h1{
-  color: rgb(211, 0, 127);
+  color: purple;
   margin: auto;
   width: 50%;
   display: flex;
@@ -33,10 +36,15 @@ h1{
   justify-content: space-around;
   flex-direction:column;
   margin: 50px auto;
-  background-color:rgb(52, 99, 228);
+  background-color:purple;
   height: 350px;
   width: 600px;
   border-radius: 14px;
+  animation: fadeIn 5s;
+}
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 .container div{
   margin: 0 10px;

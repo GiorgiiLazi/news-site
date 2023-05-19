@@ -1,6 +1,6 @@
 <template>
   <nav class="navbar">
-    <div class="brand-name">L.</div>
+    <div class="brand-name"><router-link :to="{name: 'home'}">L.</router-link></div>
     <a href="#" @click="showPanel=!showPanel" class="toggle-button">
         <span class="bar"></span>
         <span class="bar"></span>
@@ -39,16 +39,22 @@ body{
     padding: 0;
 }
 .navbar{
+    z-index: 1;
+    position: sticky;
+    top:0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: rgb(0, 191, 255);
 }
 .brand-name{
+    margin: 0.5em 2em;
+    font-weight: bold;
+}
+.brand-name a{
     color: white;
     font-size: 2em;
-    margin: 0.5em;
-    font-weight: bold;
+    text-decoration: none;
 }
 .navbar-links ul{
     margin:0;
@@ -63,6 +69,8 @@ body{
     color: white;
     padding: 1.5em;
     display: block;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 .navbar-links li:hover{
     font-size: 1.1em;

@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import Contacts from '../views/Contacts.vue'
 import Lego from '../components/Lego.vue'
 import Cars from '../components/Cars.vue'
+import Amazon from '../components/Amazon.vue'
 
 const routes = [
   {
@@ -32,6 +33,11 @@ const routes = [
     path: '/cars',
     name: 'cars',
     component: Cars
+  },
+  {
+    path: '/amazon',
+    name: 'amazon',
+    component: Amazon
   }
 ]
 
