@@ -1,5 +1,6 @@
 <template>
   <Navbar/>
+  <div class="wrapper">
   <div class="box">
     <img src="@/assets/sudan-war.jpg" alt="">
     <div class="textOn">
@@ -33,7 +34,7 @@
             </div>
     </div>
 
-    
+    </div>
 </template>
 
 <script>
@@ -45,6 +46,13 @@ export default {
 </script>
 
 <style scoped>
+.wrapper{
+    animation: fadeIn 1s;
+}
+@keyframes fadeIn{
+    0%{opacity: 0}
+    100%{opacity: 1}
+}
 .box{
     display: flex;
     margin:0 0px auto auto;
