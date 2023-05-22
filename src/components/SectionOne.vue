@@ -21,8 +21,8 @@
             </div>
             <hr>
             <div>
-                <router-link :to="{name: 'home'}" class="title-one">War in Sudan</router-link>
-                <router-link :to="{name: 'home'}" class="title-two">The humanitarian disaster unfolding in urban areas and what can stop the slide into full-scale war</router-link>
+                <router-link :to="{name: 'sudan'}" class="title-one">War in Sudan</router-link>
+                <router-link :to="{name: 'sudan'}" class="title-two">The humanitarian disaster unfolding in urban areas and what can stop the slide into full-scale war</router-link>
             </div>
             <hr>
             <div>

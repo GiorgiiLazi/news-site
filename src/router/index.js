@@ -4,6 +4,8 @@ import Contacts from '../views/Contacts.vue'
 import Lego from '../components/Lego.vue'
 import Cars from '../components/Cars.vue'
 import Amazon from '../components/Amazon.vue'
+import NotFound from '../views/NotFound.vue'
+import Sudan from '../components/Sudan.vue'
 
 const routes = [
   {
@@ -38,6 +40,16 @@ const routes = [
     path: '/amazon',
     name: 'amazon',
     component: Amazon
+  },
+  {
+    path: '/sudan',
+    name: 'sudan',
+    component: Sudan
+  },
+  {
+    path: "/:notFound",
+    name: '404',
+    component: NotFound
   }
 ]
 

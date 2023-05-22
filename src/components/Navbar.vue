@@ -58,7 +58,7 @@ body{
 }
 .navbar-links ul{
     margin:0;
-    padding: 0;
+    padding:0;
     display: flex;
 }
 .navbar-links li{
@@ -78,7 +78,7 @@ body{
 }
 .toggle-button{
     position: absolute;
-    top: 1.5rem;
+    top: 1.0rem;
     right: 1rem;
     display: none;
     flex-direction: column;
