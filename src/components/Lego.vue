@@ -52,7 +52,7 @@ export default {
 
 <style scoped>
 .box{
-    animation: fadeIn 1s;
+    animation: fadeIn 0.4s;
 }
 @keyframes fadeIn{
     0%{opacity:0}
@@ -90,7 +90,7 @@ export default {
     margin: 20px auto;
     width: 50%;
     padding: 20px;
-    font-size: 30px;
+    font-size: 20px;
     text-align: center;
 }
 .link a{
@@ -109,6 +109,7 @@ export default {
     }
     .article{
         font-size: 20px;
+        margin: 20px;
     }
     .link{
     font-size: 20px;

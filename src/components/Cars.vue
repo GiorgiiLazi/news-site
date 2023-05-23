@@ -32,10 +32,11 @@
             </div>
         </div>
 
-        <div class="link">
+        
+    </div>
+    <div class="link">
             <a href="https://www.simplifiedinsurance.net/post/manual-vs-auto-transmission">Link to the original article: <img src="@/assets/link.png" alt=""></a>
         </div>
-    </div>
 </template>
 
 <script>
@@ -52,7 +53,7 @@ export default {
 
 <style scoped>
 .wrapper{
-    animation: fadeIn 1s;
+    animation: fadeIn 0.4s;
 }
 @keyframes fadeIn{
     0%{opacity: 0}
@@ -97,19 +98,19 @@ export default {
     margin: 20px auto;
     width: 50%;
     padding: 20px;
-    font-size: 35px;
+    font-size: 20px;
+    text-align: center;
 }
 .link a{
     text-decoration: none;
     color: black;
 }
 .link a img{
-    width: 50px;
+    width: 40px;
 }
 .link a img:hover{
     width: 1.5em;
 }
-
 @media only screen and (max-width: 500px){
     .box{
     display: grid;

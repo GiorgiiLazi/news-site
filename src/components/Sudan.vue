@@ -47,7 +47,7 @@ export default {
 
 <style scoped>
 .wrapper{
-    animation: fadeIn 1s;
+    animation: fadeIn 0.4s;
 }
 @keyframes fadeIn{
     0%{opacity: 0}
@@ -68,16 +68,21 @@ export default {
     left: 10px;
     color: white;
     font-family: 'Oswald', sans-serif;
+    max-width: 55%;
+    text-align: left;
 }
 .textOn h1{
     text-transform: uppercase;
     font-size: 56px;
-    font-weight: bold
+    font-weight: bold;
+    text-shadow: 2px 2px 2px purple;
 }
 .textOn h3{
     text-transform: uppercase;
-    font-size: 30px;
-    font-weight: bold
+    font-size: 24px;
+    font-weight: bold;
+    max-width: 40%;
+    text-shadow: 2px 2px 2px purple;
 }
 .box-two{
     display: grid;
@@ -106,7 +111,7 @@ export default {
     margin: 20px auto;
     width: 50%;
     padding: 20px;
-    font-size: 30px;
+    font-size: 20px;
     text-align: center;
 }
 .link a{
@@ -119,7 +124,7 @@ export default {
 .link a img:hover{
     width: 1.5em;
 }
-@media only screen and (max-width: 550px){
+@media only screen and (max-width: 800px){
     .textOn{
         top:5px;;
         left: 5px;

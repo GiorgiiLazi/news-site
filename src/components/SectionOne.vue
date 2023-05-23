@@ -57,7 +57,7 @@ body{
     display:grid;
     grid-template-columns: repeat(auto, 12fr);
     grid-template-rows: repeat(auto, 12fr);
-    animation: fadeIn 1s;
+    animation: fadeIn 0.4s;
 }
 @keyframes fadeIn{
     0%{opacity: 0}

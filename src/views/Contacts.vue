@@ -40,7 +40,7 @@ h1{
   height: 350px;
   width: 600px;
   border-radius: 14px;
-  animation: fadeIn 5s;
+  animation: fadeIn 0.4s;
 }
 @keyframes fadeIn {
   0% { opacity: 0; }

@@ -27,7 +27,7 @@ export default {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    animation: fadeIn 1s;
+    animation: fadeIn 0.4s;
 }
 @keyframes fadeIn{
     0%{opacity: 0}

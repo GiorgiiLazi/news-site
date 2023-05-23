@@ -115,7 +115,7 @@ export default {
     box-sizing: border-box;
 }
 .box{
-    animation: fadeIn 1s;
+    animation: fadeIn 0.4s;
 }
 @keyframes fadeIn{
     0%{opacity: 0}
@@ -125,29 +125,31 @@ h1{
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 0.2em;
-    font-family: Verdana;
+    font-family: 'Oswald', sans-serif;
     font-weight: bold;
     color: purple;
     font-size: 3em;
+    text-shadow: 1px 1px 2px purple;
 }
 .head{
     color: #666;
     font-size: 1.2em;
     letter-spacing: 0.1em;
     font-weight: bold;
-    font-family:Cambria;
+    font-family:'Oswald', sans-serif;
     text-transform:uppercase;
     max-width: 800px;
     display: block;
     margin: 20px auto;
     padding: 20px;
+    text-shadow: 1px 1px 2px #666;
 }
 .animal-names{
     font-size: 0.8em;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 0.2em;
-    font-family: Verdana;
+    font-family: 'Oswald', sans-serif;
     font-weight: bold;
     color: purple;
 }
@@ -182,7 +184,7 @@ h1{
 }
 .animal-description{
     font-size: 12px;
-    font-family:cursive;
+    font-family:'Oswald', sans-serif;
     text-align: left;
     text-transform: none;
 }
@@ -190,14 +192,15 @@ h1{
     margin: 20px auto;
     width: 50%;
     padding: 20px;
-    font-size: 35px;
+    font-size: 20px;
+    text-align: center;
 }
 .link a{
     text-decoration: none;
     color: black;
 }
 .link a img{
-    width: 50px;
+    width: 40px;
 }
 .link a img:hover{
     width: 1.5em;
@@ -206,6 +209,7 @@ h1{
     display: flex;
     justify-content:center;
     align-items: center;
+    flex-wrap: wrap;
 }
 .filter-box span{
     margin: 5px;
@@ -213,7 +217,7 @@ h1{
 .active{
     border: none;
     color: white;
-    background-color:darkseagreen;
+    background-color:limegreen;
     padding: 10px;
     border-radius: 14px;
     cursor: pointer;
